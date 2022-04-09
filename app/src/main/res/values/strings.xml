@@ -2,4 +2,5 @@
     <string name="app_name">BootcampBudgetProject</string>
     <string name="merhaba">Merhaba</string>
     <string name="harcamaniz">Harcama</string>
+    <string name="harcamalar">Harcamalar</string>
 </resources>
