@@ -6,7 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="30dp"
     android:layout_margin="5dp"
-    app:cardElevation="25dp">
+    app:cardElevation="25dp"
+    android:id="@+id/cvBudget">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
