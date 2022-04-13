@@ -2,6 +2,7 @@ package com.example.bootcampbudgetproject.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bootcampbudgetproject.R;
@@ -17,17 +20,19 @@ import com.example.bootcampbudgetproject.models.MSpend;
 import java.util.ArrayList;
 
 
-public class BudgetListAdapter extends RecyclerView.Adapter<BudgetListAdapter.MyCustomViewHolder> {
+public class BudgetListAdapter extends RecyclerView.Adapter<BudgetListAdapter.BudgetListViewHolder> {
 
 
     ArrayList<MSpend> mDataList;
     LayoutInflater mInflater;
+    Context context;
 
     public BudgetListAdapter(Context context, ArrayList<MSpend> data){
 //        mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         /*
          * Yukarıdakinin daha kolayı aşağıda;
          * */
+        this.context = context;
         mInflater = LayoutInflater.from(context);
 
         this.mDataList = data;
@@ -38,7 +43,7 @@ public class BudgetListAdapter extends RecyclerView.Adapter<BudgetListAdapter.My
 
     @NonNull
     @Override
-    public MyCustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BudgetListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         /*
          *   Bu kısım ekrana sığacak olan listeleri bir defaya mahsus üretecek,
@@ -46,7 +51,7 @@ public class BudgetListAdapter extends RecyclerView.Adapter<BudgetListAdapter.My
          */
 
         View v = mInflater.inflate(R.layout.item_harcama,parent, false);
-        MyCustomViewHolder holder = new MyCustomViewHolder(v);
+        BudgetListViewHolder holder = new BudgetListViewHolder(v);
         return holder;
 
 
@@ -54,7 +59,7 @@ public class BudgetListAdapter extends RecyclerView.Adapter<BudgetListAdapter.My
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyCustomViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull BudgetListViewHolder holder, int position) {
 
         /*
          *
@@ -62,7 +67,7 @@ public class BudgetListAdapter extends RecyclerView.Adapter<BudgetListAdapter.My
          *
          */
 
-        holder.setData(mDataList.get(position),position);
+        holder.setData(mDataList.get(position),position,context);
 
 
     }
@@ -81,12 +86,13 @@ public class BudgetListAdapter extends RecyclerView.Adapter<BudgetListAdapter.My
 
 
 
-    class MyCustomViewHolder extends RecyclerView.ViewHolder{
+    class BudgetListViewHolder extends RecyclerView.ViewHolder{
 
-        TextView mManzaraTitle, mManzaraTanim;
-        ImageView mManzaraImage, mDeleteImage, mCopyImage;
+        TextView tvHarcamaAdi,tvMiktar;
+        ImageView ivIcon;
+        CardView cvBudget;
 
-        public MyCustomViewHolder(@NonNull View itemView) {
+        public BudgetListViewHolder(@NonNull View itemView) {
 
             /*
              *
@@ -94,21 +100,22 @@ public class BudgetListAdapter extends RecyclerView.Adapter<BudgetListAdapter.My
              * */
             super(itemView);
 
-//            mManzaraTitle = itemView.findViewById(R.id.tvManzaraTitle);
-//            mManzaraTanim = itemView.findViewById(R.id.tvManzaraTanim);
-//            mManzaraImage = itemView.findViewById(R.id.imageManzara);
-//            mDeleteImage = itemView.findViewById(R.id.imageDelete);
-//            mCopyImage = itemView.findViewById(R.id.imageCopy);
-
+            tvHarcamaAdi = itemView.findViewById(R.id.tvHarcamaAdi);
+            tvMiktar = itemView.findViewById(R.id.tvMiktar);
+            ivIcon = itemView.findViewById(R.id.ivIcon);
+            cvBudget = itemView.findViewById(R.id.cvBudget);
 
 
         }
 
-        public void setData(MSpend spend, int position) {
+        public void setData(MSpend spend, int position, Context context) {
 
-//            this.mManzaraTitle.setText(tiklanilanManzara.getTitle());
-//            this.mManzaraTanim.setText(tiklanilanManzara.getTanim());
-//            this.mManzaraImage.setImageResource(tiklanilanManzara.getImageID());
+
+            this.ivIcon.setBackgroundResource(spend.getBudgetType().getIcon());
+            this.tvHarcamaAdi.setText(spend.getSpendName());
+            this.tvMiktar.setText(String.valueOf(spend.getSpendMoney()));
+
+            if(position%2==0) cvBudget.setCardBackgroundColor(ContextCompat.getColor(context,R.color.cardview_dark_background));
 
         }
     }
