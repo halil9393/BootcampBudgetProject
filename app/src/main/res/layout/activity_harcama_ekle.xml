@@ -7,20 +7,20 @@
     tools:context=".HarcamaEkle">
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:hint="Açıklama"
-        app:hintTextColor="@color/acik_turuncu"
-        app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusBottomEnd="30dp"
+        app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
         app:boxCornerRadiusTopStart="30dp"
         app:boxStrokeColor="@color/acik_turuncu"
+        app:hintTextColor="@color/acik_turuncu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -28,7 +28,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -90,62 +90,75 @@
             app:layout_constraintTop_toBottomOf="@+id/radioButtonDolar" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
+
+    <RadioGroup
+        android:id="@+id/radiogroup2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:divider="@drawable/divider"
-        android:orientation="horizontal"
-        android:showDividers="middle"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-        <RadioButton
-            android:id="@+id/radioButtonTL"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TL"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <RadioButton
-            android:id="@+id/radioButtonDolar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dolar"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
-            app:layout_constraintTop_toBottomOf="@+id/radioButtonTL" />
+            <RadioButton
+                android:id="@+id/radioButtonTL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TL"
+                app:layout_constraintEnd_toStartOf="@+id/radioButtonDolar"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/radioButtonSterlin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sterlin"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
-            app:layout_constraintTop_toBottomOf="@+id/radioButtonDolar" />
+            <RadioButton
+                android:id="@+id/radioButtonDolar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dolar"
+                app:layout_constraintEnd_toStartOf="@+id/radioButtonSterlin"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/radioButtonTL"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/radioButtonEuro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Euro"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
-            app:layout_constraintTop_toBottomOf="@+id/radioButtonDolar" />
-    </LinearLayout>
-    <androidx.appcompat.widget.AppCompatButton
+            <RadioButton
+                android:id="@+id/radioButtonSterlin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sterlin"
+                app:layout_constraintEnd_toStartOf="@+id/radioButtonEuro"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/radioButtonDolar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioButton
+                android:id="@+id/radioButtonEuro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Euro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/radioButtonSterlin"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RadioGroup>
+
+    <TextView
         android:id="@+id/buttonEkle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        android:text="Ekle"
-        android:paddingRight="10dp"
-        android:paddingLeft="5dp"
-        android:textColor="#FFFFFF"
+        android:gravity="center"
         android:background="@drawable/button_custom"
         android:drawableLeft="@android:drawable/ic_menu_add"
-        />
+        android:paddingRight="10dp"
+        android:layout_marginBottom="15dp"
+        android:text="Ekle"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toBottomOf="@id/radiogroup2"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
