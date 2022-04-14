@@ -3,13 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3345" />
+        <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/drawable/bg_button_border.xml" value="0.3345" />
         <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/drawable/bg_gradient1.xml" value="0.3345" />
+        <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/drawable/button_custom.xml" value="0.3675" />
+        <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/drawable/divider.xml" value="0.3675" />
+        <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/drawable/edit_text_border.xml" value="0.3345" />
+        <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/drawable/ic_assignement.xml" value="0.3345" />
+        <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/drawable/ic_home.xml" value="0.3345" />
+        <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3345" />
+        <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/layout/activity_harcama_ekle.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/layout/activity_main2.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
