@@ -1,6 +1,8 @@
 package com.example.bootcampbudgetproject;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -52,6 +54,30 @@ public class MainActivity extends AppCompatActivity {
         spendList.add(mSpend);
         mSpend = new MSpend("Su Faturası",300,BudgetType.Fatura);
         spendList.add(mSpend);
+        mSpend = new MSpend("Elektrik Faturası",500,BudgetType.Fatura);
+        spendList.add(mSpend);
+        mSpend = new MSpend("Ev Aidatı",100,BudgetType.Diger);
+        spendList.add(mSpend);
+        mSpend = new MSpend("Su Faturası",300,BudgetType.Fatura);
+        spendList.add(mSpend);
+        mSpend = new MSpend("Elektrik Faturası",500,BudgetType.Fatura);
+        spendList.add(mSpend);
+        mSpend = new MSpend("Ev Aidatı",100,BudgetType.Diger);
+        spendList.add(mSpend);
+        mSpend = new MSpend("Su Faturası",300,BudgetType.Fatura);
+        spendList.add(mSpend);
+        mSpend = new MSpend("Elektrik Faturası",500,BudgetType.Fatura);
+        spendList.add(mSpend);
+        mSpend = new MSpend("Ev Aidatı",100,BudgetType.Diger);
+        spendList.add(mSpend);
+        mSpend = new MSpend("Su Faturası",300,BudgetType.Fatura);
+        spendList.add(mSpend);
+        mSpend = new MSpend("Elektrik Faturası",500,BudgetType.Fatura);
+        spendList.add(mSpend);
+        mSpend = new MSpend("Ev Aidatı",100,BudgetType.Diger);
+        spendList.add(mSpend);
+        mSpend = new MSpend("Su Faturası",300,BudgetType.Fatura);
+        spendList.add(mSpend);
 
 
     }
@@ -63,6 +89,12 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
+
+    }
+
+    public void btnEkle (View view){
+        Intent intent = new Intent(MainActivity.this, HarcamaEkle.class);
+        startActivity(intent);
     }
 
 
