@@ -3,9 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/drawable/bg_button_border.xml" value="0.3675" />
+        <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/drawable/bg_gradient1.xml" value="0.3675" />
+        <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/drawable/button_custom.xml" value="0.3675" />
         <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/drawable/divider.xml" value="0.3675" />
+        <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/drawable/ic_assignement.xml" value="0.3675" />
+        <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/drawable/ic_home.xml" value="0.3675" />
         <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/layout/activity_harcama_ekle.xml" value="0.33" />
-        <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/90506/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/crax_/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/drawable/bg_gradient1.xml" value="0.5166666666666667" />
         <entry key="..\:/Users/crax_/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/drawable/divider.xml" value="0.5166666666666667" />
         <entry key="..\:/Users/crax_/AndroidStudioProjects/BootcampBudgetProject/app/src/main/res/layout/activity_harcama_ekle.xml" value="0.25" />
