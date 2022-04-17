@@ -1,10 +1,21 @@
 package com.example.bootcampbudgetproject.models;
 
-import com.example.bootcampbudgetproject.enums.BudgetType;
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+import com.example.bootcampbudgetproject.enums.BudgetType;
+import com.google.android.material.textfield.TextInputEditText;
+
+@Entity(tableName = "spend_table")
 public class MSpend {
 
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "harcama_adi")
     String spendName;
+
     int spendMoney;
     BudgetType budgetType;
 
@@ -13,6 +24,7 @@ public class MSpend {
         this.spendMoney = spendMoney;
         this.budgetType = budgetType;
     }
+
 
     public String getSpendName() {
         return spendName;

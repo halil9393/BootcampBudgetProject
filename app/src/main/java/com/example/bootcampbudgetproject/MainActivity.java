@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<MSpend> spendList;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -95,7 +96,11 @@ public class MainActivity extends AppCompatActivity {
     public void btnEkle (View view){
         Intent intent = new Intent(MainActivity.this, HarcamaEkle.class);
         startActivity(intent);
+
     }
+
+
+
 
 
 
